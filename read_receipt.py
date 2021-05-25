@@ -10,6 +10,10 @@ if os.name == 'nt':
 
 
 def get_image():
+    """
+    This method gets the image from a GUI
+    :return: Returns the image
+    """
     # we don't want a full GUI, so keep the root window from appearing
     Tk().withdraw()
 
@@ -24,6 +28,11 @@ def get_image():
 
 
 def read_img(file_name):
+    """
+    This method reads the image and converts the data to text
+    :param file_name: The image to be read
+    :return: Returns the text from the image
+    """
     img = cv2.imread(file_name)
     text = pytesseract.image_to_string(img)
     return text
