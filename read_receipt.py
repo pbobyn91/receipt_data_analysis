@@ -5,7 +5,6 @@ from tkinter import Tk
 from tkinter.filedialog import askopenfilename
 
 # if Windows then set tesseract
-print(os.name)
 if os.name == 'nt':
     pytesseract.pytesseract.tesseract_cmd = r"C:\\Program Files\\Tesseract-OCR\\tesseract.exe"
 
