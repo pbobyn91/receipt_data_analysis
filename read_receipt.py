@@ -38,8 +38,19 @@ def read_img(file_name):
     return text
 
 
+def parse_data(text):
+    """
+    This method will parse through the data and make a key, value dictionary pair.
+    :param text: The text to be parsed
+    :return: Returns the dictionary
+    """
+    return text
+
+
 if __name__ == '__main__':
     receipt = get_image()
     data = read_img(receipt)
 
-    print(data)
+    items = parse_data(data)
+    for key, value in items:
+        print(f"{key}: {value}")
