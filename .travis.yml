@@ -1,0 +1,13 @@
+language: python
+rvm:
+  - 3.8
+  - 3.9
+before_install:
+  - python --version
+  - pip install -U pip
+  - pip install -U pytest
+install:
+  - pip install "./packages/packages" .
+script: pytest
+after_success:
+  - codecov
