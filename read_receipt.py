@@ -47,13 +47,6 @@ def read_img(file_name):
     clean = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
     clean = cv2.GaussianBlur(clean, (5, 5), 0)
 
-    # Show the Cleaned Image
-    cv2.imshow("Output", imutils.resize(clean, height=650))
-
-    # Waits for Image to be closed
-    cv2.waitKey(0)
-    cv2.destroyAllWindows()
-
     # Write cleaned image out to the tmp image
     cv2.imwrite(tmp_file, clean)
 
