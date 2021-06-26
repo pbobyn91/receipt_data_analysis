@@ -1,6 +1,5 @@
 opencv-python
 tesseract
-tesseract-ocr
 pytesseract
 pytest
 pylint
