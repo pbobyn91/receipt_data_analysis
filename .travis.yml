@@ -10,7 +10,7 @@ before_install:
   - pip install -U pip
   - pip install -U pytest
 install:
-  - apt-get install tessseract-ocr
+  - sudo apt-get install tessseract-ocr
   - pip install -r packages/packages.txt
 script: pytest
 after_success:
